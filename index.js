@@ -18,9 +18,12 @@ function deepestChild() {
   var temp = document.getElementById('grand-node');
   
   while (typeof(temp) === 'object') {
+    if (!temp.querySelector('div')) {
+      return temp.innerHTML;
+    }
     temp = temp.querySelector('div');
   }
   
-  return temp.innerHTML;
+  //return temp.innerHTML;
 }
 
