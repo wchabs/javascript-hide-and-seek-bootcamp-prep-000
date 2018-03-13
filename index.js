@@ -19,7 +19,7 @@ function deepestChild() {
   
   while (typeof(temp) === 'object') {
     if (!temp.querySelector('div')) {
-      return temp.innerHTML;
+      return temp;
     }
     temp = temp.querySelector('div');
   }
